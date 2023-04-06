@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
                 padding: EdgeInsets.all(10),
                   child: const Text('Hello, Moris',
                   style: TextStyle(
-                    fontSize: 30,
+                    fontSize: 35,
                     fontWeight: FontWeight.bold,
                   ),),
               ),
