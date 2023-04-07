@@ -25,11 +25,11 @@ class _MainPageState extends State<MainPage> {
         MaterialPageRoute(builder: (context) => MyApp()),
         );
       break;
-      //status
+      //book
       case 1:
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => StatusPage()),
+          MaterialPageRoute(builder: (context) => Book()),
         );
       break;
       //notifications
@@ -39,8 +39,15 @@ class _MainPageState extends State<MainPage> {
           MaterialPageRoute(builder: (context) => Notifications()),
           );
       break;
-      //account
+      //schedule
       case 3:
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => Schedule()),
+          );
+      break;
+      //account
+      case 4:
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => Account()),
@@ -63,24 +70,34 @@ class _MainPageState extends State<MainPage> {
         unselectedItemColor: Colors.black,
         elevation: 5,
         items: const [
+
           BottomNavigationBarItem(
-            label: "Home",
+            label: "",
             icon: Icon(Icons.home_filled),
             tooltip: "Home", //display msg when it is long-pressed
           ),
+
           BottomNavigationBarItem(
-            label: "Status",
-            icon: Icon(Icons.autorenew_rounded),
-            tooltip: "Status",
+            label: "",
+            icon: Icon(Icons.menu_book_rounded),
+            tooltip: "Book",
+            ),
+
+          BottomNavigationBarItem(
+            label: "",
+            icon: Icon(Icons.messenger_outline_rounded),
+            tooltip: "Message",
           ),
+          
           BottomNavigationBarItem(
-            label: "Notifications",
-            icon: Icon(Icons.message_rounded),
-            tooltip: "Notifications",
+            label: "",
+            icon: Icon(Icons.pie_chart_outline_rounded),
+            tooltip: "Schedule",
           ),
+
           BottomNavigationBarItem(
-            label: "Account",
-            icon: Icon(Icons.account_circle),
+            label: "",
+            icon: Icon(Icons.person_2_outlined),
             tooltip: "Account",
           ),
         ],
@@ -89,13 +106,13 @@ class _MainPageState extends State<MainPage> {
   }
 }
 
-//status
-class StatusPage extends StatelessWidget {
+//book
+class Book extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
-      child: Text('Status'),
+      child: Text('List of book'),
     );
   }
 }
@@ -111,13 +128,24 @@ class Notifications extends StatelessWidget {
   }
 }
 
+//status
+class Schedule extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      alignment: Alignment.center,
+      child: Text('Schedule'),
+    );
+  }
+}
+
 //account
 class Account extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
-      child: Text('Create New Account'),
+      child: Text('Account'),
     );
   }
 }

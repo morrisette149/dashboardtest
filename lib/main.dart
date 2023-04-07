@@ -25,23 +25,26 @@ class MyApp extends StatelessWidget {
 
           //body: SingleChildScrollView(
             body: Column( //column ingat! bc children
-          
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                
+                //height: 50,
                 alignment: Alignment.topLeft,
-                padding: EdgeInsets.all(10),
-                  child: const Text('Hello, Moris',
+                padding: EdgeInsets.all(20),
+                  child: const Text('Hi,Moris',
                   style: TextStyle(
                     fontSize: 35,
                     fontWeight: FontWeight.bold,
                   ),),
               ),
-                SizedBox(height: 30),//set the space between test and the grid
-                Expanded(child: Grid(),),
+            
+                SizedBox(height: 410, child: Grid(),),//set the space between grid and productivity
+                //Expanded(child: Grid(),),
+                SizedBox(height: 250, child: Productivity(),),//productivity and product
+                //Expanded(child: Productivity(),),
+                //SizedBox(height: 100, child: Product(),),//product and mainpage
+                //Expanded(child: Product(),),
                 
-                Expanded(child: Productivity(),),
                 Expanded(child: MainPage(),),
             ],),
           ),
