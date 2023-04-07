@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
                 //height: 50,
                 alignment: Alignment.topLeft,
                 padding: EdgeInsets.all(20),
-                  child: const Text('Hi, Moris',
+                  child: const Text('Hi,Moris',
                   style: TextStyle(
                     fontSize: 35,
                     fontWeight: FontWeight.bold,
