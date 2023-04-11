@@ -18,36 +18,53 @@ class MyApp extends StatelessWidget {
         
         primarySwatch: Colors.blue,
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Dashboard'),
-        ),
-
-          //body: SingleChildScrollView(
-            body: Column( //column ingat! bc children
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                //height: 50,
-                alignment: Alignment.topLeft,
-                padding: EdgeInsets.all(20),
-                  child: const Text('Hi,Moris',
-                  style: TextStyle(
-                    fontSize: 35,
-                    fontWeight: FontWeight.bold,
-                  ),),
-              ),
-            
-                SizedBox(height: 410, child: Grid(),),//set the space between grid and productivity
-                //Expanded(child: Grid(),),
-                SizedBox(height: 250, child: Productivity(),),//productivity and product
-                //Expanded(child: Productivity(),),
-                //SizedBox(height: 100, child: Product(),),//product and mainpage
-                //Expanded(child: Product(),),
-                
-                Expanded(child: MainPage(),),
-            ],),
+      home: DefaultTabController(
+        length: 3,
+        child: Scaffold(
+          appBar: AppBar(
+            title: const Text('Dashboard'),
           ),
+      
+            //body: SingleChildScrollView(
+              body: Column( //column ingat! bc children
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  //height: 50,
+                  alignment: Alignment.topLeft,
+                  padding: const EdgeInsets.all(20),
+                    child: const Text('Hi,Moris',
+                    style: TextStyle(
+                      fontSize: 35,
+                      fontWeight: FontWeight.bold,
+                    ),),
+                ),
+
+                const TabBar(tabs: [
+                  Tab(text: 'All',),
+                  Tab(text: 'Male',),
+                  Tab(text: 'Female',),
+                ],),
+                const Expanded(
+                  child: TabBarView(
+                    children: [
+                      Center(child: Text('All')),
+                      Center(child: Text('Male')),
+                      Center(child: Text('Female')),
+                    ],),
+                  ),
+              
+                  SizedBox(height: 410, child: Grid(),),//set the space between grid and productivity
+                  //Expanded(child: Grid(),),
+                  SizedBox(height: 200, child: Productivity(),),//productivity and product
+                  //Expanded(child: Productivity(),),
+                  //SizedBox(height: 100, child: Product(),),//product and mainpage
+                  //Expanded(child: Product(),),
+                  
+                  Expanded(child: MainPage(),),
+              ],),
+            ),
+      ),
       
       );
   }

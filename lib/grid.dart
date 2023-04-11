@@ -1,6 +1,6 @@
 //grid
 import 'package:flutter/material.dart';
-
+import 'package:dashboard/form.dart';
 
 
 class Grid extends StatelessWidget {
@@ -11,7 +11,7 @@ class Grid extends StatelessWidget {
       //physics: NeverScrollableScrollPhysics (),//ensure tht the widget is not scrollable
       crossAxisCount: 2, //will have 2 columns and arrange in rows with 2 items
       //maxCrossAxisExtent: 300,
-      padding: EdgeInsets.symmetric(horizontal: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 20),
       
       //childAspectRatio: 1.2,
       mainAxisSpacing: 40, // set the space vertically
@@ -22,11 +22,11 @@ class Grid extends StatelessWidget {
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => GridPage()),
+              MaterialPageRoute(builder: (context) => FormFinancial()),
               );
           },
           child: Container(
-          padding: EdgeInsets.all(10), // set space in the text
+          padding: const EdgeInsets.all(10), // set space in the text
           //width: 200,
           height: 200,
           //to decorate the grid
@@ -48,13 +48,13 @@ class Grid extends StatelessWidget {
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => GridPage()),
+              MaterialPageRoute(builder: (context) => FormFinancial()),
               );
           },
           child: Container(
           //width: 200,
           height: 500,
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(
             color: Colors.blueAccent,
             borderRadius: BorderRadius.circular(15),
@@ -80,7 +80,7 @@ class Grid extends StatelessWidget {
           child: Container(
           //width: 200,
           height: 500,
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(
             color: Colors.lightBlue,
             borderRadius: BorderRadius.circular(15),
@@ -106,7 +106,7 @@ class Grid extends StatelessWidget {
           child: Container(
           //width: 200,
           height: 500,
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(
             color: Colors.lightBlueAccent,
             borderRadius: BorderRadius.circular(15),
@@ -136,13 +136,13 @@ class Productivity extends StatelessWidget {
       mainAxisSpacing: 50, // set the space vertically
       crossAxisSpacing: 50, // set the space horinzontally
 
-      padding: EdgeInsets.symmetric(horizontal: 15),//ato space grid
+      padding: const EdgeInsets.symmetric(horizontal: 15),//ato space grid
       
       children: [
         //
         Container(
           //set the space between the container and text
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           //decoration
           decoration: BoxDecoration(
             color: Colors.blue,
@@ -152,7 +152,7 @@ class Productivity extends StatelessWidget {
                 color: Colors.grey.withOpacity(0.5),
                 spreadRadius: 2,
                 blurRadius: 3,
-                offset: Offset(0, 3),
+                offset: const Offset(0, 3),
               ),
             ],
           ),
@@ -161,17 +161,17 @@ class Productivity extends StatelessWidget {
             child: Row(//so tht both text and the button in 1 line
              mainAxisAlignment: MainAxisAlignment.center,
              children: [
-              Text('Productivity',
+              const Text('Productivity',
               style: TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.bold,
               ),),
 
-              SizedBox(width: 160),
+              const SizedBox(width: 160),
 
               //Dropdown menu
               DropdownButton<String>(
-                items: [
+                items: const [
 
                   DropdownMenuItem(
                     child: Text('Option 1',
@@ -196,19 +196,19 @@ class Productivity extends StatelessWidget {
                 onChanged: (String? value){
 
                 },
-                hint: Text('More',
+                hint: const Text('More',
                 style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                 ),),
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                 ),
                 dropdownColor: Colors.blue,
-                icon: Icon(Icons.arrow_drop_down),
+                icon: const Icon(Icons.arrow_drop_down),
                 iconSize: 30,
                 underline: Container(), //to remove the underline
                 ),
@@ -220,7 +220,7 @@ class Productivity extends StatelessWidget {
         //
         Container(
           //set the space between the container and text
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           //decoration
           decoration: BoxDecoration(
             color: Colors.blue,
@@ -230,7 +230,7 @@ class Productivity extends StatelessWidget {
                 color: Colors.grey.withOpacity(0.5),
                 spreadRadius: 2,
                 blurRadius: 3,
-                offset: Offset(0, 3),
+                offset: const Offset(0, 3),
               ),
             ],
           ),
@@ -239,17 +239,17 @@ class Productivity extends StatelessWidget {
             child: Row(//so tht both text and the button in 1 line
              mainAxisAlignment: MainAxisAlignment.center,
              children: [
-              Text('Financial Freedom',
+              const Text('Financial Freedom',
               style: TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.bold,
               ),),
 
-              SizedBox(width: 120),
+              const SizedBox(width: 120),
 
               //Dropdown menu
               DropdownButton<String>(
-                items: [
+                items: const [
 
                   DropdownMenuItem(
                     child: Text('Option 1',
@@ -274,19 +274,19 @@ class Productivity extends StatelessWidget {
                 onChanged: (String? value){
 
                 },
-                hint: Text('More',
+                hint: const Text('More',
                 style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                 ),),
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                 ),
                 dropdownColor: Colors.blue,
-                icon: Icon(Icons.arrow_drop_down),
+                icon: const Icon(Icons.arrow_drop_down),
                 iconSize: 30,
                 underline: Container(), //to remove the underline
                 ),
@@ -298,7 +298,7 @@ class Productivity extends StatelessWidget {
         //
         Container(
           //set the space between the container and text
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           //decoration
           decoration: BoxDecoration(
             color: Colors.blue,
@@ -308,7 +308,7 @@ class Productivity extends StatelessWidget {
                 color: Colors.grey.withOpacity(0.5),
                 spreadRadius: 2,
                 blurRadius: 3,
-                offset: Offset(0, 3),
+                offset: const Offset(0, 3),
               ),
             ],
           ),
@@ -317,17 +317,17 @@ class Productivity extends StatelessWidget {
             child: Row(//so tht both text and the button in 1 line
              mainAxisAlignment: MainAxisAlignment.center,
              children: [
-              Text('Feeling Well',
+              const Text('Feeling Well',
               style: TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.bold,
               ),),
 
-              SizedBox(width: 160),
+              const SizedBox(width: 160),
 
               //Dropdown menu
               DropdownButton<String>(
-                items: [
+                items: const [
 
                   DropdownMenuItem(
                     child: Text('Option 1',
@@ -352,19 +352,19 @@ class Productivity extends StatelessWidget {
                 onChanged: (String? value){
 
                 },
-                hint: Text('More',
+                hint: const Text('More',
                 style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                 ),),
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                 ),
                 dropdownColor: Colors.blue,
-                icon: Icon(Icons.arrow_drop_down),
+                icon: const Icon(Icons.arrow_drop_down),
                 iconSize: 30,
                 underline: Container(), //to remove the underline
                 ),
@@ -376,7 +376,7 @@ class Productivity extends StatelessWidget {
         //
         Container(
           //set the space between the container and text
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           //decoration
           decoration: BoxDecoration(
             color: Colors.blue,
@@ -386,7 +386,7 @@ class Productivity extends StatelessWidget {
                 color: Colors.grey.withOpacity(0.5),
                 spreadRadius: 2,
                 blurRadius: 3,
-                offset: Offset(0, 3),
+                offset: const Offset(0, 3),
               ),
             ],
           ),
@@ -395,17 +395,17 @@ class Productivity extends StatelessWidget {
             child: Row(//so tht both text and the button in 1 line
              mainAxisAlignment: MainAxisAlignment.center,
              children: [
-              Text('Personal Life',
+              const Text('Personal Life',
               style: TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.bold,
               ),),
 
-              SizedBox(width: 160),
+              const SizedBox(width: 160),
 
               //Dropdown menu
               DropdownButton<String>(
-                items: [
+                items: const [
 
                   DropdownMenuItem(
                     child: Text('Option 1',
@@ -430,19 +430,19 @@ class Productivity extends StatelessWidget {
                 onChanged: (String? value){
 
                 },
-                hint: Text('More',
+                hint: const Text('More',
                 style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                 ),),
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                 ),
                 dropdownColor: Colors.blue,
-                icon: Icon(Icons.arrow_drop_down),
+                icon: const Icon(Icons.arrow_drop_down),
                 iconSize: 30,
                 underline: Container(), //to remove the underline
                 ),
@@ -456,13 +456,14 @@ class Productivity extends StatelessWidget {
   }
 }
 
-//grid page
+//grid page 
 class GridPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
-      child: Text('Hello'),
+      child: const Text('Hello'),
+
       );
   }
 }
@@ -478,13 +479,13 @@ class Product extends StatelessWidget {
       mainAxisSpacing: 50, // set the space vertically
       crossAxisSpacing: 50, // set the space horinzontally
 
-      padding: EdgeInsets.symmetric(horizontal: 15),
+      padding: const EdgeInsets.symmetric(horizontal: 15),
       
       children: [
         
         Container(
           //set the space between the container and text
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           //decoration
           decoration: BoxDecoration(
             color: Colors.blue,
@@ -494,7 +495,7 @@ class Product extends StatelessWidget {
                 color: Colors.grey.withOpacity(0.5),
                 spreadRadius: 2,
                 blurRadius: 3,
-                offset: Offset(0, 3),
+                offset: const Offset(0, 3),
               ),
             ],
           ),
@@ -502,13 +503,13 @@ class Product extends StatelessWidget {
             child: Row(//so tht both text and the button in 1 line
              mainAxisAlignment: MainAxisAlignment.center,
              children: [
-              Text('Productivity',
+              const Text('Productivity',
               style: TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.bold,
               ),),
 
-              SizedBox(width: 190),
+              const SizedBox(width: 190),
 
               ElevatedButton(
                 onPressed: () {
@@ -557,8 +558,6 @@ class Product extends StatelessWidget {
             ),
           ),
         ),
-
-
       ],
     );
   }
