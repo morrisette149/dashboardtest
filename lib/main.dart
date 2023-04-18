@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:cupertino_icons/cupertino_icons.dart';
 import 'bottomnavi.dart';
 import 'grid.dart';
 
@@ -23,46 +25,59 @@ class MyApp extends StatelessWidget {
         child: Scaffold(
           appBar: AppBar(
             title: const Text('Dashboard'),
+            leading: Icon(Icons.logout_outlined), //icon at appbar
           ),
       
             //body: SingleChildScrollView(
               body: Column( //column ingat! bc children
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  //height: 50,
-                  alignment: Alignment.topLeft,
-                  padding: const EdgeInsets.all(20),
-                    child: const Text('Hi,Moris',
-                    style: TextStyle(
-                      fontSize: 35,
-                      fontWeight: FontWeight.bold,
-                    ),),
-                ),
-
-                const TabBar(tabs: [
-                  Tab(text: 'All',),
-                  Tab(text: 'Male',),
-                  Tab(text: 'Female',),
-                ],),
-                const Expanded(
-                  child: TabBarView(
-                    children: [
-                      Center(child: Text('All')),
-                      Center(child: Text('Male')),
-                      Center(child: Text('Female')),
-                    ],),
+                //mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    alignment: Alignment.topLeft,
+                    padding: const EdgeInsets.fromLTRB(20, 10, 50, 0),
+                      child: const Text('Hi,Moris',
+                      style: TextStyle(
+                        fontSize: 35,
+                        fontWeight: FontWeight.bold,
+                      ),),
                   ),
               
-                  SizedBox(height: 410, child: Grid(),),//set the space between grid and productivity
-                  //Expanded(child: Grid(),),
-                  SizedBox(height: 200, child: Productivity(),),//productivity and product
-                  //Expanded(child: Productivity(),),
-                  //SizedBox(height: 100, child: Product(),),//product and mainpage
-                  //Expanded(child: Product(),),
-                  
-                  Expanded(child: MainPage(),),
-              ],),
+                  CupertinoTabBar(
+                  items: [
+                    
+                    BottomNavigationBarItem(
+                      icon: Icon(CupertinoIcons.person_2),
+                      label: 'All',
+                    ),
+                    BottomNavigationBarItem(
+                      icon: Icon(CupertinoIcons.person),
+                      label: 'Male',
+                    ),
+                    BottomNavigationBarItem(
+                      icon: Icon(CupertinoIcons.person),
+                      label: 'Female',
+                    ),
+                  ],
+                  border: Border(
+                    top: BorderSide.none,
+                    bottom: BorderSide.none,
+                    left: BorderSide.none,
+                    right: BorderSide.none,
+                    //BorderRadius: BorderRadius.circular(30.0),
+                  ),
+                ),
+
+                
+                    SizedBox(height: 400, child: Grid(),),//set the space between grid and productivity
+                    //Expanded(child: Grid(),),
+                    SizedBox(height: 100, child: Productivity(),),//productivity and product
+                    //Expanded(child: Productivity(),),
+                    //SizedBox(height: 100, child: Product(),),//product and mainpage
+                    //Expanded(child: Product(),),
+                    
+                    Expanded(child: MainPage(),),
+                ],),
+            
             ),
       ),
       

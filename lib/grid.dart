@@ -7,6 +7,7 @@ class Grid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.count(
+      physics: BouncingScrollPhysics(),
       //shrinkWrap: true,
       //physics: NeverScrollableScrollPhysics (),//ensure tht the widget is not scrollable
       crossAxisCount: 2, //will have 2 columns and arrange in rows with 2 items
@@ -131,6 +132,7 @@ class Productivity extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.count(
+      physics: BouncingScrollPhysics(),
       childAspectRatio: 6,
       crossAxisCount: 1,//create a grid with 1 cols
       mainAxisSpacing: 50, // set the space vertically
@@ -157,7 +159,7 @@ class Productivity extends StatelessWidget {
             ],
           ),
 
-          child: SingleChildScrollView(
+          //child: SingleChildScrollView(
             child: Row(//so tht both text and the button in 1 line
              mainAxisAlignment: MainAxisAlignment.center,
              children: [
@@ -214,10 +216,10 @@ class Productivity extends StatelessWidget {
                 ),
              ],
             ),
-          ),
+          //), //singlescroll
         ),
 
-        //
+        //this
         Container(
           //set the space between the container and text
           padding: const EdgeInsets.all(10),
@@ -235,7 +237,7 @@ class Productivity extends StatelessWidget {
             ],
           ),
 
-          child: SingleChildScrollView(
+          //child: SingleChildScrollView(
             child: Row(//so tht both text and the button in 1 line
              mainAxisAlignment: MainAxisAlignment.center,
              children: [
@@ -292,7 +294,7 @@ class Productivity extends StatelessWidget {
                 ),
              ],
             ),
-          ),
+          //), singlescroll
         ),
 
         //
@@ -313,7 +315,7 @@ class Productivity extends StatelessWidget {
             ],
           ),
 
-          child: SingleChildScrollView(
+          //child: SingleChildScrollView(
             child: Row(//so tht both text and the button in 1 line
              mainAxisAlignment: MainAxisAlignment.center,
              children: [
@@ -370,7 +372,7 @@ class Productivity extends StatelessWidget {
                 ),
              ],
             ),
-          ),
+          //), singlescroll
         ),
 
         //
@@ -391,7 +393,8 @@ class Productivity extends StatelessWidget {
             ],
           ),
 
-          child: SingleChildScrollView(
+          //child: SingleChildScrollView(
+            //physics: BouncingScrollPhysics(),
             child: Row(//so tht both text and the button in 1 line
              mainAxisAlignment: MainAxisAlignment.center,
              children: [
@@ -448,7 +451,7 @@ class Productivity extends StatelessWidget {
                 ),
              ],
             ),
-          ),
+          //), singlescroll
         ),
 
       ],
